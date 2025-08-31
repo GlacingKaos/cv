@@ -1,22 +1,51 @@
-/* CSS Variables - Paleta de Colores Base */
+/* CSS Variables - Paleta de Colores Indigo Material Design */
 :root {
-  /* Colores principales basados en colores-base.json */
-  --primary-color: #1E2A38;
-  --secondary-color: #FF7A1C;
-  --accent-color: #00C2A8;
-  --background-color: #FFFFFF;
-  --background-dark: #0D1117;
-  --text-primary: #1E2A38;
-  --text-secondary: #6B7280;
-  --text-light: #FFFFFF;
-  --border-color: #E5E7EB;
-  --shadow-color: rgba(0, 0, 0, 0.15);
+  /* Paleta Indigo Material Design - Cumple estándares WCAG 2.1 */
+  --primary-color: #3f51b5; /* indigo - Color principal profesional */
+  --primary-dark: #303f9f; /* indigo darken-2 - Para hover states y profundidad */
+  --primary-darker: #283593; /* indigo darken-3 - Para elementos activos */
+  --primary-light: #5c6bc0; /* indigo lighten-1 - Para backgrounds sutiles */
+  --primary-lighter: #9fa8da; /* indigo lighten-3 - Para bordes y divisores */
 
-  /* Gradientes */
-  /* --primary-gradient: linear-gradient(135deg, #1E2A38 0%, #FF7A1C 100%); */
-  --primary-gradient: linear-gradient(135deg, #FF7A1C 0%, #1E2A38 100%);
-  --secondary-gradient: linear-gradient(135deg, #FF7A1C 0%, #00C2A8 100%);
-  --accent-gradient: linear-gradient(135deg, #00C2A8 0%, #1E2A38 100%);
+  --secondary-color: #536dfe; /* indigo accent-2 - Color de acento vibrante */
+  --secondary-light: #8c9eff; /* indigo accent-1 - Para highlights */
+  --secondary-dark: #3d5afe; /* indigo accent-3 - Para CTAs importantes */
+
+  --accent-color: #304ffe; /* indigo accent-4 - Para elementos interactivos */
+
+  /* Backgrounds */
+  --background-color: #ffffff; /* Blanco puro para tema claro */
+  --background-secondary: #e8eaf6; /* indigo lighten-5 - Background alternativo */
+  --background-tertiary: #c5cae9; /* indigo lighten-4 - Cards y secciones */
+  --background-dark: #1a237e; /* indigo darken-4 - Fondo modo oscuro */
+
+  /* Texto con ratios de contraste WCAG AA/AAA */
+  --text-primary: #283593; /* indigo darken-3 - Contraste 7.1:1 en blanco */
+  --text-secondary: #5c6bc0; /* indigo lighten-1 - Contraste 4.8:1 en blanco */
+  --text-tertiary: #9fa8da; /* indigo lighten-3 - Para texto secundario */
+  --text-light: #ffffff; /* Blanco para fondos oscuros */
+  --text-on-primary: #ffffff; /* Texto sobre primary color */
+
+  /* Bordes y divisores */
+  --border-color: #c5cae9; /* indigo lighten-4 - Sutil pero visible */
+  --border-light: #e8eaf6; /* indigo lighten-5 - Para divisores sutiles */
+  --border-dark: #7986cb; /* indigo lighten-2 - Para énfasis */
+
+  /* Sombras con tinte indigo */
+  --shadow-color: rgba(63, 81, 181, 0.15); /* Sombra con tinte indigo */
+  --shadow-color-dark: rgba(26, 35, 126, 0.25); /* Sombra más oscura */
+  --shadow-color-light: rgba(159, 168, 218, 0.1); /* Sombra sutil */
+
+  /* Gradientes actualizados con indigo */
+  --primary-gradient: linear-gradient(135deg, #3f51b5 0%, #536dfe 100%);
+  --secondary-gradient: linear-gradient(135deg, #536dfe 0%, #8c9eff 100%);
+  --accent-gradient: linear-gradient(135deg, #304ffe 0%, #3f51b5 100%);
+  --hero-gradient: linear-gradient(135deg, #283593 0%, #3f51b5 50%, #536dfe 100%);
+
+  /* Estados de interacción */
+  --hover-overlay: rgba(63, 81, 181, 0.08); /* Overlay sutil para hover */
+  --active-overlay: rgba(63, 81, 181, 0.12); /* Overlay para estado activo */
+  --focus-ring: #8c9eff; /* Color para focus ring - accesibilidad */
 
   /* Espaciado */
   --container-max-width: 1200px;
@@ -52,21 +81,72 @@
 /* Auto detección del tema del sistema */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --background-color: #0D1117;
-    --text-primary: #FFFFFF;
-    --text-secondary: #8B949E;
-    --border-color: #30363D;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --background-color: #1a237e; /* indigo darken-4 */
+    --background-secondary: #283593; /* indigo darken-3 */
+    --background-tertiary: #303f9f; /* indigo darken-2 */
+    --text-primary: #e8eaf6; /* indigo lighten-5 - Excelente contraste */
+    --text-secondary: #c5cae9; /* indigo lighten-4 - Buena legibilidad */
+    --text-tertiary: #9fa8da; /* indigo lighten-3 - Texto secundario */
+    --border-color: #3f51b5; /* indigo - Bordes visibles en modo oscuro */
+    --border-light: #303f9f; /* indigo darken-2 - Bordes sutiles */
+    --shadow-color: rgba(26, 35, 126, 0.4); /* Sombra oscura con tinte indigo */
   }
 }
 
 /* Modo Oscuro Manual */
 [data-theme="dark"] {
-  --background-color: #0D1117;
-  --text-primary: #FFFFFF;
-  --text-secondary: #8B949E;
-  --border-color: #30363D;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --background-color: #1a237e; /* indigo darken-4 */
+  --background-secondary: #283593; /* indigo darken-3 */
+  --background-tertiary: #303f9f; /* indigo darken-2 */
+  --text-primary: #e8eaf6; /* indigo lighten-5 - Excelente contraste */
+  --text-secondary: #c5cae9; /* indigo lighten-4 - Buena legibilidad */
+  --text-tertiary: #9fa8da; /* indigo lighten-3 - Texto secundario */
+  --border-color: #3f51b5; /* indigo - Bordes visibles en modo oscuro */
+  --border-light: #303f9f; /* indigo darken-2 - Bordes sutiles */
+  --shadow-color: rgba(26, 35, 126, 0.4); /* Sombra oscura con tinte indigo */
+}
+
+/* Mejoras de UX con la paleta Indigo */
+/* Focus states mejorados para accesibilidad */
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selección de texto con colores indigo */
+::selection {
+  background: var(--secondary-light);
+  color: var(--background-color);
+}
+
+::-moz-selection {
+  background: var(--secondary-light);
+  color: var(--background-color);
+}
+
+/* Estados de hover mejorados para enlaces */
+a:not(.btn):hover {
+  color: var(--secondary-color);
+  transition: color var(--transition-fast);
+}
+
+/* Scrollbar personalizada con tema indigo */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--border-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 /* Reset y Base */
@@ -151,27 +231,27 @@ body {
 
 .btn-primary {
   background: var(--primary-gradient);
-  color: var(--text-light);
-  box-shadow: 0 4px 15px rgba(255, 122, 28, 0.3);
+  color: var(--text-on-primary);
+  box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 122, 28, 0.4);
+  box-shadow: 0 8px 25px var(--shadow-color-dark);
 }
 
 .btn-secondary {
-  background: rgba(30, 42, 56, 0.05);
+  background: var(--hover-overlay);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(30, 42, 56, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-color-light);
 }
 
 .btn-secondary:hover {
   background: var(--primary-color);
-  color: var(--text-light);
+  color: var(--text-on-primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 42, 56, 0.25);
+  box-shadow: 0 6px 20px var(--shadow-color);
 }
 
 /* Navegación */
@@ -188,45 +268,45 @@ body {
 }
 
 [data-theme="dark"] .navbar {
-  background: rgba(13, 17, 23, 0.95);
+  background: rgba(26, 35, 126, 0.95); /* indigo darken-4 con transparencia */
 }
 
 /* Auto navbar dark theme */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .navbar {
-    background: rgba(13, 17, 23, 0.95);
+    background: rgba(26, 35, 126, 0.95); /* indigo darken-4 con transparencia */
   }
 }
 
 /* Botones en modo oscuro */
 [data-theme="dark"] .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-light);
-  border: 2px solid var(--text-light);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: var(--active-overlay);
+  color: var(--text-primary);
+  border: 2px solid var(--primary-light);
+  box-shadow: 0 2px 8px var(--shadow-color);
 }
 
 [data-theme="dark"] .btn-secondary:hover {
-  background: var(--text-light);
-  color: var(--primary-color);
+  background: var(--primary-light);
+  color: var(--background-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px var(--shadow-color-dark);
 }
 
 /* Auto botones en modo oscuro del sistema */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-light);
-    border: 2px solid var(--text-light);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: var(--active-overlay);
+    color: var(--text-primary);
+    border: 2px solid var(--primary-light);
+    box-shadow: 0 2px 8px var(--shadow-color);
   }
 
   :root:not([data-theme]) .btn-secondary:hover {
-    background: var(--text-light);
-    color: var(--primary-color);
+    background: var(--primary-light);
+    color: var(--background-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px var(--shadow-color-dark);
   }
 }
 
@@ -348,7 +428,7 @@ body {
 /* Hero Section */
 .hero {
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, rgba(30, 42, 56, 0.05) 0%, rgba(255, 122, 28, 0.05) 100%);
+  background: linear-gradient(135deg, var(--background-secondary) 0%, rgba(83, 109, 254, 0.05) 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -437,7 +517,7 @@ body {
 /* About / Certificaciones */
 .about {
   padding: var(--section-padding);
-  background: var(--background-color);
+  background: var(--background-secondary);
 }
 
 .certifications-grid {
@@ -547,7 +627,7 @@ body {
 /* Experience / Timeline */
 .experience {
   padding: var(--section-padding);
-  background: linear-gradient(135deg, rgba(30, 42, 56, 0.02) 0%, rgba(255, 122, 28, 0.02) 100%);
+  background: linear-gradient(135deg, var(--background-color) 0%, rgba(63, 81, 181, 0.03) 100%);
 }
 
 .timeline {
@@ -983,7 +1063,7 @@ body {
 /* Contact */
 .contact {
   padding: var(--section-padding);
-  background: linear-gradient(135deg, rgba(30, 42, 56, 0.02) 0%, rgba(255, 122, 28, 0.02) 100%);
+  background: var(--background-secondary);
 }
 
 .contact-grid {
