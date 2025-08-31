@@ -41,6 +41,8 @@
 </head>
 <body>
     <!-- Navigation -->
+    <!-- El tema se adapta automáticamente a las preferencias del sistema -->
+    <!-- Click: cambiar tema manualmente | Doble click: seguir sistema -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -70,8 +72,9 @@
                 </li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Click: cambiar tema | Doble click: seguir sistema">
                     <i class="fas fa-moon"></i>
+                    <span class="theme-indicator" id="theme-indicator"></span>
                 </button>
                 <div class="hamburger" id="hamburger">
                     <span class="bar"></span>

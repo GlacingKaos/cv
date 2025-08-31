@@ -2,45 +2,153 @@
 
 class ThemeManager {
     constructor() {
-        this.theme = localStorage.getItem('theme') || 'light';
+        // Detectar preferencia del sistema si no hay preferencia guardada
+        this.systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        this.theme = localStorage.getItem('theme') || (this.systemPrefersDark ? 'dark' : 'light');
         this.themeToggle = document.getElementById('theme-toggle');
+        this.themeIndicator = document.getElementById('theme-indicator');
+        this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isFollowingSystem = !localStorage.getItem('theme');
         this.init();
     }
 
     init() {
         this.applyTheme();
         this.bindEvents();
+        this.watchSystemTheme();
+        this.updateIndicator();
+    }
+
+    watchSystemTheme() {
+        // Escuchar cambios en la preferencia del sistema
+        this.mediaQuery.addEventListener('change', (e) => {
+            // Solo aplicar automáticamente si el usuario no ha establecido una preferencia manual
+            if (this.isFollowingSystem) {
+                this.theme = e.matches ? 'dark' : 'light';
+                this.applyTheme();
+
+                // Tracking para Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'theme_auto_change', {
+                        'theme': this.theme,
+                        'source': 'system'
+                    });
+                }
+            }
+        });
+    }
+
+    updateIndicator() {
+        if (this.isFollowingSystem) {
+            this.themeIndicator.classList.add('system-theme');
+            this.themeToggle.setAttribute('title', 'Siguiendo tema del sistema | Click: cambiar tema | Doble click: seguir sistema');
+        } else {
+            this.themeIndicator.classList.remove('system-theme');
+            this.themeToggle.setAttribute('title', 'Tema manual | Click: cambiar tema | Doble click: seguir sistema');
+        }
     }
 
     applyTheme() {
-        document.documentElement.setAttribute('data-theme', this.theme);
+        // Si está siguiendo el tema del sistema, no establecer data-theme
+        // para permitir que CSS use prefers-color-scheme
+        if (this.isFollowingSystem) {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', this.theme);
+        }
+
         const icon = this.themeToggle.querySelector('i');
+
+        // Actualizar icono del toggle
         if (this.theme === 'dark') {
             icon.className = 'fas fa-sun';
+            this.themeToggle.setAttribute('aria-label', 'Cambiar a tema claro');
         } else {
             icon.className = 'fas fa-moon';
+            this.themeToggle.setAttribute('aria-label', 'Cambiar a tema oscuro');
         }
+
+        this.updateIndicator();
     }
 
     toggleTheme() {
         this.theme = this.theme === 'light' ? 'dark' : 'light';
+        this.isFollowingSystem = false;
         localStorage.setItem('theme', this.theme);
         this.applyTheme();
 
         // Tracking para Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'theme_change', {
-                'theme': this.theme
+                'theme': this.theme,
+                'source': 'manual'
             });
         }
     }
 
+    // Método para resetear a la preferencia del sistema
+    resetToSystemTheme() {
+        localStorage.removeItem('theme');
+        this.isFollowingSystem = true;
+        this.theme = this.mediaQuery.matches ? 'dark' : 'light';
+        this.applyTheme();
+
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'theme_reset_to_system', {
+                'theme': this.theme
+            });
+        }
+
+        // Mostrar feedback visual
+        this.showSystemThemeNotification();
+    }
+
+    showSystemThemeNotification() {
+        // Crear notificación temporal
+        const notification = document.createElement('div');
+        notification.className = 'theme-notification';
+        notification.textContent = 'Siguiendo tema del sistema';
+        notification.style.cssText = `
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-light);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 9999;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        `;
+
+        document.body.appendChild(notification);
+
+        // Animar entrada
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+
+        // Remover después de 3 segundos
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+
     bindEvents() {
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
-    }
-}
 
-class MobileNavigation {
+        // Doble click para resetear a preferencia del sistema
+        this.themeToggle.addEventListener('dblclick', () => this.resetToSystemTheme());
+    }
+}class MobileNavigation {
     constructor() {
         this.hamburger = document.getElementById('hamburger');
         this.navMenu = document.querySelector('.nav-menu');

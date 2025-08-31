@@ -48,7 +48,18 @@
   --z-tooltip: 1100;
 }
 
-/* Modo Oscuro */
+/* Auto detección del tema del sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: #0D1117;
+    --text-primary: #FFFFFF;
+    --text-secondary: #8B949E;
+    --border-color: #30363D;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Modo Oscuro Manual */
 [data-theme="dark"] {
   --background-color: #0D1117;
   --text-primary: #FFFFFF;
@@ -177,6 +188,13 @@ body {
   background: rgba(13, 17, 23, 0.95);
 }
 
+/* Auto navbar dark theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .navbar {
+    background: rgba(13, 17, 23, 0.95);
+  }
+}
+
 .nav-container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -241,11 +259,40 @@ body {
   padding: 8px;
   border-radius: 50%;
   transition: all var(--transition-normal);
+  position: relative;
 }
 
 .theme-toggle:hover {
   background: var(--border-color);
   transform: scale(1.1);
+}
+
+.theme-indicator {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.theme-indicator.system-theme {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
 }
 
 .hamburger {
