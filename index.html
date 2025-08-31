@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Gerardo García Serrato - Senior Backend Developer</title>
+    <meta name="description" content="Senior Backend Developer con 9+ años de experiencia en desarrollo de aplicaciones web escalables, especializado en Python, Django, FastAPI y AWS.">
+    <meta name="keywords" content="Backend Developer, Python, Django, FastAPI, AWS, Technical Lead, Software Engineer">
+    <meta name="author" content="Christian Gerardo García Serrato">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Christian Gerardo García Serrato - Senior Backend Developer">
+    <meta property="og:description" content="Senior Backend Developer con 9+ años de experiencia en desarrollo de aplicaciones web escalables">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./files/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./files/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./files/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./files/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./files/icons/favicon-16x16.png">
+    <link rel="manifest" href="./files/icons/site.webmanifest">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-logo-text">Christian García</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Certificaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experiencia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Competencias</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Educación</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-profile">
+                    <img src="./files/profile.jpg" alt="Christian Gerardo García Serrato" class="profile-image">
+                </div>
+                <h1 class="hero-title">Christian Gerardo García Serrato</h1>
+                <h2 class="hero-subtitle">Senior Backend Developer | Technical Lead</h2>
+                <p class="hero-description">
+                    Experimentado Senior Backend Developer con <strong>9+ años</strong> de experiencia en el diseño y desarrollo de aplicaciones web escalables utilizadas en <strong>15+ países</strong>. Actualmente liderando un equipo backend como Technical Lead, especializado en desarrollo Python con Django, FastAPI y AWS Lambda.
+                </p>
+                <div class="hero-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>christiangerardogs@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+52 443 444 1200</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Morelia, Michoacán, México</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Contactar
+                    </a>
+                    <a href="./files/CV_Christian_Garcia.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Certificaciones -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Certificaciones & Especialidades</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS Certified Professional</h3>
+                    <p>Especialista en servicios AWS: Lambda, API Gateway, ECS, EC2, RDS</p>
+                    <span class="cert-year">2023</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Expert Developer</h3>
+                    <p>Django 5, FastAPI, Tornado, DRF - Desarrollo web avanzado</p>
+                    <span class="cert-year">2022</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Technical Leadership</h3>
+                    <p>Liderazgo técnico y gestión de equipos de desarrollo</p>
+                    <span class="cert-year">2023</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3>DevOps & Containerization</h3>
+                    <p>Docker, Kubernetes, Terraform, CI/CD con GitLab</p>
+                    <span class="cert-year">2023</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Architecture</h3>
+                    <p>PostgreSQL, MongoDB, Redis, ElasticSearch</p>
+                    <span class="cert-year">2022</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>React, Vue.js, JavaScript, Java Spring</p>
+                    <span class="cert-year">2021</span>
+                </div>
+            </div>
+
+            <div class="courses-section">
+                <h3>Metodologías & Procesos</h3>
+                <div class="tags-container">
+                    <span class="tag">Scrum</span>
+                    <span class="tag">XP</span>
+                    <span class="tag">TDD</span>
+                    <span class="tag">SOA</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Git-Flow</span>
+                    <span class="tag">OAuth2</span>
+                    <span class="tag">JWT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Experiencia -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2022 - Actualidad</div>
+                        <h3>Senior Backend Developer & Technical Lead</h3>
+                        <h4>getfairplay.com - Ciudad de México</h4>
+                        <p>Lidero el equipo backend con experiencia en desarrollo Python, Docker e infraestructura en la nube. Diseño e implemento pipelines CI/CD con GitLab CI/CD, así como despliegue de infraestructura en AWS usando Terraform. Responsable del Identity Provider (IDP) de la empresa integrado con AWS API Gateway. Mantengo una plataforma Django monolítica mientras desarrollo microservicios usando FastAPI y AWS Lambda.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Ago 2020 - Sep 2022</div>
+                        <h3>Full Web Application Developer</h3>
+                        <h4>mandarinprojects.mx - Ciudad de México</h4>
+                        <p>Desarrollé aplicaciones web usando React, APIs Python (Django) y PHP (Laravel) como aplicaciones privadas. Trabajé en aplicaciones web en entornos ágiles usando GitHub, implementando soluciones escalables y mantenibles para clientes corporativos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2017 - Ago 2020</div>
+                        <h3>Full Web Application Developer</h3>
+                        <h4>emkode.com - Morelia, Michoacán</h4>
+                        <p>Desarrollé aplicaciones web usando React, Django (DRF), Vue.js, Angular.js, jQuery, SpringBoot, Ruby on Rails en múltiples tecnologías (PHP, Python, Java, Ruby, JavaScript). Trabajé en proyectos como pagefreezer.com, starmedica.com, subsidios.inmujeres.gob.mx, sin-cola.com, sistemauva.net y rutadehospitalidad.org.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2016 - Feb 2017</div>
+                        <h3>Full Web Application Developer</h3>
+                        <h4>spartangeek.com - Ciudad de México</h4>
+                        <p>Desarrollé aplicaciones web usando Angular.js, Cycle.js y Mithril (Redux) en GoLang y Laravel-5. Proyectos incluyen buldar.com, comparateca.com y spartangeek.com. Implementé arquitecturas modernas y patrones de diseño avanzados.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2015 - May 2016</div>
+                        <h3>Full Web Application Developer</h3>
+                        <h4>Freelance</h4>
+                        <p>Desarrollé aplicaciones web usando jQuery en PHP y Laravel 5. Proyectos destacados incluyen grupoinmobiliariogmo.com y bejattos.com. Trabajé directamente con clientes para entregar soluciones personalizadas y escalables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Proyectos Destacados -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>🚀 Plataforma FairPlay Global</h3>
+                    <p>Plataforma de gestión escalable desarrollada con Django y FastAPI, desplegada en AWS con microservicios. Integración completa con servicios AWS incluyendo Lambda, API Gateway y RDS.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Utilizada en 15+ países con 99.9% de uptime
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>🔐 Identity Provider (IDP)</h3>
+                    <p>Sistema de autenticación y autorización empresarial integrado con AWS Cognito y API Gateway. Implementación de OAuth2 y JWT para múltiples aplicaciones.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Reducción del 60% en tiempo de autenticación
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>⚡ Pipeline CI/CD Automatizado</h3>
+                    <p>Implementación de pipelines CI/CD con GitLab para automatización completa de testing, build y deployment usando Docker y Terraform en AWS.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Reducción del 80% en tiempo de deployment
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>🏥 StarMedica Platform</h3>
+                    <p>Sistema de gestión hospitalaria con Django y React, incluyendo gestión de pacientes, citas médicas y historiales clínicos. Integración con sistemas legacy.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Mejora del 40% en eficiencia operativa
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>📱 Aplicación React Multi-tenant</h3>
+                    <p>Aplicación web responsive con React y Redux para múltiples clientes corporativos. Backend API REST con Django DRF y autenticación JWT.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Incremento del 150% en engagement de usuarios
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>🔍 Sistema de Búsqueda ElasticSearch</h3>
+                    <p>Motor de búsqueda avanzado con ElasticSearch, implementando filtros complejos, agregaciones y búsqueda en tiempo real para aplicaciones web.</p>
+                    <div class="project-result">
+                        <strong>Resultado:</strong> Mejora del 300% en velocidad de búsqueda
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectors-section">
+                <h3>Sectores de Experiencia</h3>
+                <div class="tags-container">
+                    <span class="tag">Tecnología</span>
+                    <span class="tag">Salud</span>
+                    <span class="tag">Fintech</span>
+                    <span class="tag">E-commerce</span>
+                    <span class="tag">Gobierno</span>
+                    <span class="tag">Educación</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / Competencias -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Competencias Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Python & Django Development</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="96"></div>
+                        </div>
+                        <span class="skill-percentage">96%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>AWS Cloud Architecture</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="94"></div>
+                        </div>
+                        <span class="skill-percentage">94%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>DevOps & Containerization</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="92"></div>
+                        </div>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Database Design & Management</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="90"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>JavaScript & React Development</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="88"></div>
+                        </div>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>CI/CD & Git Workflows</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="93"></div>
+                        </div>
+                        <span class="skill-percentage">93%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Technical Leadership</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="89"></div>
+                        </div>
+                        <span class="skill-percentage">89%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>API Design & Microservices</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="95"></div>
+                        </div>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Security & Authentication</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="87"></div>
+                        </div>
+                        <span class="skill-percentage">87%</span>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Performance Optimization</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="91"></div>
+                        </div>
+                        <span class="skill-percentage">91%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-summary">
+                <div class="summary-card">
+                    <h3>Competencias Core</h3>
+                    <p>Especialista en arquitectura backend escalable con enfoque en tecnologías Python, servicios AWS y liderazgo técnico. Experiencia comprobada en el desarrollo de sistemas distribuidos y gestión de equipos de desarrollo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education / Educación -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Educación & Idiomas</h2>
+            <div class="education-content">
+                <div class="education-main">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3>Ingeniería en Sistemas Computacionales</h3>
+                            <h4>Especialidad en Ingeniería de Software</h4>
+                            <p>Instituto Tecnológico de Morelia</p>
+                            <span class="education-period">Enero 2013 - Junio 2017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="languages-section">
+                    <h3>Idiomas</h3>
+                    <div class="language-item">
+                        <div class="language-info">
+                            <span class="language-name">Español</span>
+                            <span class="language-level">Nativo</span>
+                        </div>
+                        <div class="language-bar">
+                            <div class="language-progress" data-language="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="language-info">
+                            <span class="language-name">Inglés</span>
+                            <span class="language-level">Avanzado</span>
+                        </div>
+                        <div class="language-bar">
+                            <div class="language-progress" data-language="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Contacto -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>christiangerardogs@gmail.com</p>
+                    <a href="mailto:christiangerardogs@gmail.com" class="contact-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Email
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+52 443 444 1200</p>
+                    <a href="https://wa.me/524434441200" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar Mensaje
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Conecta conmigo profesionalmente</p>
+                    <a href="https://linkedin.com/in/christian-garcia-serrato" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        Ver Perfil
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Revisa mis repositorios</p>
+                    <a href="https://github.com/GlacingKaos" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        Ver Repositorios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Christian Gerardo García Serrato. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#hero">Inicio</a>
+                    <a href="#about">Certificaciones</a>
+                    <a href="#experience">Experiencia</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#skills">Competencias</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
