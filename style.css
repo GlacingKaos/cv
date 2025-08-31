@@ -13,7 +13,8 @@
   --shadow-color: rgba(0, 0, 0, 0.15);
 
   /* Gradientes */
-  --primary-gradient: linear-gradient(135deg, #1E2A38 0%, #FF7A1C 100%);
+  /* --primary-gradient: linear-gradient(135deg, #1E2A38 0%, #FF7A1C 100%); */
+  --primary-gradient: linear-gradient(135deg, #FF7A1C 0%, #1E2A38 100%);
   --secondary-gradient: linear-gradient(135deg, #FF7A1C 0%, #00C2A8 100%);
   --accent-gradient: linear-gradient(135deg, #00C2A8 0%, #1E2A38 100%);
 
@@ -160,15 +161,17 @@ body {
 }
 
 .btn-secondary {
-  background: transparent;
+  background: rgba(30, 42, 56, 0.05);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(30, 42, 56, 0.1);
 }
 
 .btn-secondary:hover {
   background: var(--primary-color);
   color: var(--text-light);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 42, 56, 0.25);
 }
 
 /* Navegación */
@@ -192,6 +195,38 @@ body {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .navbar {
     background: rgba(13, 17, 23, 0.95);
+  }
+}
+
+/* Botones en modo oscuro */
+[data-theme="dark"] .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  border: 2px solid var(--text-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: var(--text-light);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Auto botones en modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  :root:not([data-theme]) .btn-secondary:hover {
+    background: var(--text-light);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
   }
 }
 
